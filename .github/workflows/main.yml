@@ -21,7 +21,7 @@ jobs:
       # Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t my-app .
+           docker build -t ${{ secrets.DOCKER_USERNAME }}/my-app:latest .
       
       # Log in to DockerHub
       - name: Log in to DockerHub
